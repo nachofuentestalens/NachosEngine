@@ -1,0 +1,30 @@
+#version 330 core
+
+//el usuario no deberia usar estas mats
+//int num lights
+uniform mat4 model_matrix;
+uniform mat4 projection_matrix;
+uniform mat4 view_matrix;
+uniform mat4 light_view;
+uniform mat4 light_projection;
+
+layout(location = 0) in vec3 a_position;
+layout(location = 1) in vec3 a_normal;
+layout(location = 2) in vec2 a_uv;
+smooth out vec2 uv;
+smooth out vec3 o_normal;
+smooth out vec3 o_position;
+out vec3 normal;
+out vec4 shadow_coord;
+void main()
+{
+	gl_Position = vec4(a_position,1.0);
+	vec4 worldPos = model_matrix * gl_Position;
+	gl_Position = projection_matrix * view_matrix * worldPos;
+	uv = a_uv;
+	o_normal = normalize(model_matrix*vec4(normalize(a_normal),0.0)).xyz;
+	o_position = (model_matrix * vec4(a_position,1.0)).xyz;
+	normal = a_normal;
+
+	shadow_coord = light_projection * light_view * worldPos;
+}

@@ -1,0 +1,13 @@
+#version 330
+
+smooth in vec4 theColor;
+smooth in vec3 o_normal;
+smooth in vec3 o_position;
+in vec3 normal;
+out vec4 outputColor;
+
+void main()
+{
+  outputColor = vec4(0.0,0.0,0.0,0.0);
+}
+

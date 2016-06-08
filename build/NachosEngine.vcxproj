@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="debug|Win32">
+      <Configuration>debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="release|Win32">
+      <Configuration>release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A37F25BE-9ED7-B548-985E-D1DFDB99355F}</ProjectGuid>
+    <RootNamespace>NachosEngine</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\x32\debug\</IntDir>
+    <TargetName>NachosEngine</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|Win32'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\x32\release\</IntDir>
+    <TargetName>NachosEngine</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader></PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)NachosEngine.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;Assimp32.lib;glew32.lib;glew32s.lib;glew32d.lib;glew32sd.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)NachosEngine.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\deps\SDL2-2.0.3\lib\x86;..\deps\glew\lib;..\deps\assimp\lib\assimp_release-dll_win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader></PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;Assimp32.lib;glew32.lib;glew32s.lib;glew32d.lib;glew32sd.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)NachosEngine.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\deps\SDL2-2.0.3\lib\x86;..\deps\glew\lib;..\deps\assimp\lib\assimp_release-dll_win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\gpumanager.h" />
+    <ClInclude Include="..\include\NachosEngine\buffer.h" />
+    <ClInclude Include="..\include\NachosEngine\camera.h" />
+    <ClInclude Include="..\include\NachosEngine\drawable.h" />
+    <ClInclude Include="..\include\NachosEngine\frame_buffer.h" />
+    <ClInclude Include="..\include\NachosEngine\geometry.h" />
+    <ClInclude Include="..\include\NachosEngine\geometry_builder.h" />
+    <ClInclude Include="..\include\NachosEngine\light.h" />
+    <ClInclude Include="..\include\NachosEngine\material.h" />
+    <ClInclude Include="..\include\NachosEngine\material_settings.h" />
+    <ClInclude Include="..\include\NachosEngine\node.h" />
+    <ClInclude Include="..\include\NachosEngine\referenced.h" />
+    <ClInclude Include="..\include\NachosEngine\ref_ptr.h" />
+    <ClInclude Include="..\include\NachosEngine\scoped_array.h" />
+    <ClInclude Include="..\include\NachosEngine\scoped_ptr.h" />
+    <ClInclude Include="..\include\NachosEngine\texture.h" />
+    <ClInclude Include="..\include\NachosEngine\typedefs.h" />
+    <ClInclude Include="..\include\NachosEngine\window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\camera.cc">
+    </ClCompile>
+    <ClCompile Include="..\src\drawable.cc">
+    </ClCompile>
+    <ClCompile Include="..\src\frame_buffer.cc">
+    </ClCompile>
+    <ClCompile Include="..\src\geometry.cc">
+    </ClCompile>
+    <ClCompile Include="..\src\geometry_builder.cc">
+    </ClCompile>
+    <ClCompile Include="..\src\gpumanager.cc">
+    </ClCompile>
+    <ClCompile Include="..\src\light.cc">
+    </ClCompile>
+    <ClCompile Include="..\src\main.cc">
+    </ClCompile>
+    <ClCompile Include="..\src\material.cc">
+    </ClCompile>
+    <ClCompile Include="..\src\material_settings.cc">
+    </ClCompile>
+    <ClCompile Include="..\src\node.cc">
+    </ClCompile>
+    <ClCompile Include="..\src\texture.cc">
+    </ClCompile>
+    <ClCompile Include="..\src\window.cc">
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

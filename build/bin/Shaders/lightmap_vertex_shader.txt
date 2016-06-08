@@ -1,0 +1,21 @@
+#version 330 core
+uniform mat4 zmodel_matrix;
+//light projection matrix
+uniform mat4 projection_matrix;
+//light view matrix
+uniform mat4 view_matrix;
+
+layout(location = 0) in vec3 a_position;
+layout(location = 1) in vec3 a_normal;
+smooth out vec2 uv;
+smooth out vec3 o_normal;
+smooth out vec3 o_position;
+out vec3 normal;
+void main()
+{
+	gl_Position = vec4(a_position,1.0);
+	gl_Position = projection_matrix * view_matrix * zmodel_matrix * gl_Position;
+	o_normal = normalize(zmodel_matrix*vec4(normalize(a_normal),0.0)).xyz;
+	o_position = (zmodel_matrix * vec4(a_position,1.0)).xyz;
+	normal = a_normal;
+}

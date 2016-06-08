@@ -1,0 +1,30 @@
+﻿Build started 19/05/2016 14:31:25.
+     1>Project "C:\Users\chete\Desktop\NachosEngine\build\NachosEngine.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\include /nologo /W3 /WX- /MP /Ox /Oy- /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"obj\x32\release\\" /Fd"obj\x32\release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\main.cc
+         main.cc
+     1>c:\users\chete\desktop\nachosengine\include\nachosengine\scoped_ptr.h(26): warning C4150: deletion of pointer to incomplete type 'NachosEngine::Buffer::InternalB'; no destructor called
+                 ..\include\NachosEngine\buffer.h(25) : see declaration of 'NachosEngine::Buffer::InternalB'
+                 c:\users\chete\desktop\nachosengine\include\nachosengine\scoped_ptr.h(25) : while compiling class template member function 'NachosEngine::scoped_ptr<NachosEngine::Buffer::InternalB>::~scoped_ptr(void)'
+                 ..\include\NachosEngine\buffer.h(41) : see reference to function template instantiation 'NachosEngine::scoped_ptr<NachosEngine::Buffer::InternalB>::~scoped_ptr(void)' being compiled
+                 ..\include\NachosEngine\buffer.h(26) : see reference to class template instantiation 'NachosEngine::scoped_ptr<NachosEngine::Buffer::InternalB>' being compiled
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"bin\NachosEngine.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"..\deps\SDL2-2.0.3\lib\x86" /LIBPATH:..\deps\glew\lib /LIBPATH:"..\deps\assimp\lib\assimp_release-dll_win32" SDL2.lib SDL2main.lib Assimp32.lib glew32.lib glew32s.lib glew32d.lib glew32sd.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"bin\NachosEngine.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /TLBID:1 /ENTRY:"mainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"bin\NachosEngine.lib" /MACHINE:X86 /SAFESEH obj\x32\release\camera.obj
+         obj\x32\release\drawable.obj
+         obj\x32\release\frame_buffer.obj
+         obj\x32\release\geometry.obj
+         obj\x32\release\geometry_builder.obj
+         obj\x32\release\gpumanager.obj
+         obj\x32\release\light.obj
+         obj\x32\release\main.obj
+         obj\x32\release\material.obj
+         obj\x32\release\material_settings.obj
+         obj\x32\release\node.obj
+         obj\x32\release\texture.obj
+         obj\x32\release\window.obj
+         NachosEngine.vcxproj -> C:\Users\chete\Desktop\NachosEngine\build\bin\NachosEngine.exe
+     1>Done Building Project "C:\Users\chete\Desktop\NachosEngine\build\NachosEngine.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.22

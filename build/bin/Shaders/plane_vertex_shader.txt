@@ -1,0 +1,12 @@
+#version 330 core
+uniform mat4 model_matrix;
+uniform mat4 projection_matrix;
+uniform mat4 view_matrix;
+
+layout(location = 0) in vec3 a_position;
+
+void main()
+{
+	gl_Position = vec4(a_position,1.0);
+	gl_Position = projection_matrix * view_matrix * model_matrix * gl_Position;
+}

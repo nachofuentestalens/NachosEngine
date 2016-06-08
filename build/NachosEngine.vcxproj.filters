@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{EED6A97E-4FAD-6142-93CA-A42AE84F7BF0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{6A52631D-6698-0345-A02B-C17FCE822283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\NachosEngine">
+      <UniqueIdentifier>{A70BE1F3-8AAF-3947-B8E1-D2489CFA9C6F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\gpumanager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\buffer.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\camera.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\drawable.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\frame_buffer.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\geometry.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\geometry_builder.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\light.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\material.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\material_settings.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\node.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\referenced.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\ref_ptr.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\scoped_array.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\scoped_ptr.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\texture.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\typedefs.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\NachosEngine\window.h">
+      <Filter>include\NachosEngine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\camera.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\drawable.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\frame_buffer.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\geometry.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\geometry_builder.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gpumanager.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\light.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\material.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\material_settings.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\node.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\texture.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\window.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

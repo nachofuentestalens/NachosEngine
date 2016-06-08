@@ -1,0 +1,15 @@
+#version 330
+smooth in vec2 uv;
+out vec4 outputColor;
+uniform sampler2D tex;
+uniform sampler2D glow_tex;
+void main()
+{
+	int levelofdetail = 0;
+  //outputColor = textureLod(tex,uv,levelofdetail);
+  outputColor = textureLod(tex,uv,levelofdetail) + textureLod(glow_tex,uv,levelofdetail) * 0.5;
+  outputColor.a = 1.0;
+  //outputColor = textureLod(glow_tex,uv,levelofdetail);
+  //outputColor = vec4(1.0,0.0,0.0,1.0);
+}
+
